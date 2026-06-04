@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';     
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.top-nav {
+    background-color: #1a365d;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #fbb742; 
+
+}
+
+.top-nav a {
+
+    margin: 0px 5px;
+    text-decoration: none;
+    font-size: 13px;   
+    font-weight: bold;
+}
+
+.socials {
+    align-items: end;
+}
+.socials a{
+    color: #fbb742;
+}
+
+.contact a {
+    color: #f0f0f0;
+}
+
+.white {
+    background-color: white;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+/* Control the size of the logo image inside the white container */
+.white img {
+    height: 100px;     /* Forces the logo to be a neat, clean height */
+    width: auto; 
+    margin: 0 auto; 
+    justify-content: center; 
+    align-items: center;
+    display: flex;    /* Automatically scales the width proportionally so it doesn't look stretched */
+}
+
+.bottom-nav{
+    background-color: #1a365d;
+    padding: 12px 30px ;
+
+}
+
+.bottom-nav nav{
+    display: flex;
+    align-items: start;
+}
+
+.bottom-nav nav a {
+    
+    color: white;
+    text-decoration: none;  
+    margin: 0px 20px;  
+    font-size: 15px; 
+    
+}
+
+
+.bottom-nav nav a:hover {
+    color: #fbd38d;            
+}
