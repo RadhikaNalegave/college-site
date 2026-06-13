@@ -1,0 +1,24 @@
+{
+  "name": "college-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "interact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadhikaNalegave/college-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RadhikaNalegave/college-site/issues"
+  },
+  "homepage": "https://github.com/RadhikaNalegave/college-site#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.11"
+  }
+}
