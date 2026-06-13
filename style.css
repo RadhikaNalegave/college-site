@@ -534,3 +534,43 @@ h1{
 h4{
     font-weight: bold;
 }
+
+
+.navigate{
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 80px;
+    gap: 20px;
+    
+}
+.navigate a{
+    color: rgb(46, 106, 179);
+    text-decoration: none;
+    font-size: 18px;
+
+}
+.navigate a:hover{
+    color: black;
+    
+}
+
+.main-body{
+    display: flex;
+    padding: 50px 30px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    color: white;
+    font-weight: bold;
+    background-color: #0f213a;
+
+}
+th, td{
+    border: 1px solid black;
+    padding: 15px;
+}
