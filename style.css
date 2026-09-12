@@ -109,22 +109,31 @@ body {
 
 
 .carousel-container{
-    display: flex;
+    width: 100%;
     position: relative;
+    
 }
 
 .carousel-list{
+    overflow: hidden;
     display: flex;
 }
 
 .carousel-item{
     min-width: 100%;
     height: 600px;
+    
+    transform: translateX(0%);
+    transition: transform 1s;
+    
+    
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
+    
+    
 }
 
 .carousel-button{
@@ -142,6 +151,9 @@ body {
     font-size: 30px;
 }
 
+.change-width{
+    transform: translateX(-100%);
+}
 
 
 

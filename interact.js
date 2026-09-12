@@ -1,5 +1,3 @@
-let a = 5;
-console.log(a);
 
 document.addEventListener("DOMContentLoaded" , () =>{
     const open = document.getElementById('open');
@@ -26,9 +24,35 @@ document.addEventListener("DOMContentLoaded" , () =>{
         errors = InvalidMailError(mail);
 
         if(errors.length > 0){
-        e.preventDefault()
-        error_msg.innerText = errors.join(". ")
-    }
+            e.preventDefault()
+            error_msg.innerText = errors.join(". ")
+        }
+        else{
+            e.preventDefault()
+
+            const login = mail.value;
+            const usermail = { email: login }
+    
+            fetch('http://localhost:3000', {
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify(usermail)
+
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('received data from server', data)
+        })
+
+        }
+
+    })
+
+    form.addEventListener( 'reset', (e) =>{
+
+        
 
     })
     
@@ -66,10 +90,41 @@ document.addEventListener("DOMContentLoaded" , () =>{
             error_msg.innerText = ' '
             console.log(error_msg.innerText)
         }
+        mail.value = ' ';
         popbox.classList.remove('show');
     
     });
 
-})
+    const right_btn = document.getElementById('right-btn');
+    const left_btn = document.getElementById('left-btn');
+    const carousel = document.querySelectorAll('.carousel-item');
 
-    
+    let start = 0;
+    const end= 2;
+
+    right_btn.addEventListener( 'click' , () => {
+
+        start = start - 100;
+        if(start >= end*(-100)){
+
+            carousel.forEach(element =>{
+            element.style.transform = `translateX(${start}%)`;
+
+             })
+
+        }
+
+
+    })
+
+    left_btn.addEventListener( 'click' , () => {
+
+        start = start + 100;
+        if(start <= 0){
+            carousel.forEach(element =>{
+            element.style.transform = `translateX(${start}%)`;
+            })
+        }
+    })
+
+})

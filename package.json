@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/RadhikaNalegave/college-site#readme",
   "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "nodemailer": "^8.0.11"
+    "nodemailer": "^9.0.5"
   }
 }
