@@ -109,22 +109,31 @@ body {
 
 
 .carousel-container{
-    display: flex;
+    width: 100%;
     position: relative;
+    
 }
 
 .carousel-list{
+    overflow: hidden;
     display: flex;
 }
 
 .carousel-item{
     min-width: 100%;
     height: 600px;
+    
+    transform: translateX(0%);
+    transition: transform 1s;
+    
+    
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
+    
+    
 }
 
 .carousel-button{
@@ -142,6 +151,9 @@ body {
     font-size: 30px;
 }
 
+.change-width{
+    transform: translateX(-100%);
+}
 
 
 
@@ -327,10 +339,69 @@ body {
 
 }*/
 
+.pop-box{
+    padding: 50px;
+    background-color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: fixed;
+    top: 30%;
+    width: auto;
+    left: 28%;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    
 
+}
 
+.pop-box.show{
+    pointer-events: auto;
+    opacity: 1;
+}
 
+.mail-box{
+    display: block;
+    
+}
 
+.btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+}
+form input{
+    background-color: #c5d0db;
+    border-radius: 3px;
+    border: none;
+    height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+}
+form input:hover{
+    border: 2px solid #0f213a;
+}
+
+form div.incorrect input{
+    border-color: red;
+}
+
+#error-msg{
+    color: red;
+}
 
 
 .activity-container{
@@ -422,7 +493,8 @@ h1{
 
 .ytb-item{
     justify-content: center;
-    padding: 0 500px;
+    padding: 10px;
+    padding-bottom: 25px;
     position: relative;
     align-items: center;
 }
@@ -437,8 +509,6 @@ h1{
 .ytb-item > .blocks{
     justify-content: center;
 }
-
-
 
 
 
