@@ -48,7 +48,7 @@ app.post('/', async (req,res) => {
         from: 'radhika.nalegave.2007@gmail.com',
         to: usermail.email,
         subject: 'Course details',
-        text: 'This is all'
+        text: 'MKSSSs Cummins College of Engineering for Women in Karve Nagar, Pune offers a four-year full-time B.Tech Programme affiliated with Savitribai Phule Pune University.'
     };
 
     transporter.sendMail(mailContent, function(error, info){
